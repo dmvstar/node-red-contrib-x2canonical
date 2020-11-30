@@ -1,0 +1,75 @@
+[
+    {
+        "id": "c58fa0b5.4ce44",
+        "type": "tab",
+        "label": "xml-c14n",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "62fc9833.96842",
+        "type": "inject",
+        "z": "c58fa0b5.4ce44",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 60,
+        "wires": [
+            [
+                "11365915.c319bf"
+            ]
+        ]
+    },
+    {
+        "id": "6e6326e5.315ac8",
+        "type": "debug",
+        "z": "c58fa0b5.4ce44",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 250,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "11365915.c319bf",
+        "type": "template",
+        "z": "c58fa0b5.4ce44",
+        "name": "XML IN",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!--\n   DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.\n  \n   Copyright (c) 2006 Sun Microsystems Inc. All Rights Reserved\n  \n   The contents of this file are subject to the terms\n   of the Common Development and Distribution License\n   (the License). You may not use this file except in\n   compliance with the License.\n                                                                                \n   You can obtain a copy of the License at\n   https://opensso.dev.java.net/public/CDDLv1.0.html or\n   opensso/legal/CDDLv1.0.txt\n   See the License for the specific language governing\n   permission and limitations under the License.\n                                                                                \n   When distributing Covered Code, include this CDDL\n   Header Notice in each file and include the License file\n   at opensso/legal/CDDLv1.0.txt.\n   If applicable, add the following below the CDDL Header,\n   with the fields enclosed by brackets [] replaced by\n   your own identifying information:\n   \"Portions Copyrighted [year] [name of copyright owner]\"\n                                                                                \n   $Id: sampleAuthnRequest.xml,v 1.2 2008/06/25 05:48:22 qcheng Exp $\n                                                                                \n-->\n<samlp:AuthnRequest \n    xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" \n    xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\"\n    ID=\"d2b7c388cec36fa7c39\"\n    Version=\"2.0\"  \n    IssueInstant=\"2006-11-30T22:32:20Z\"\n    Destination=\"http://www.sp.com/sp\"\n    Consent=\"http://www.sp.com/consent\"\n    ForceAuthn=\"false\"\n    isPassive=\"false\"\n    ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact\"\n    AssertionConsumerServiceIndex=\"2\"\n    AssertionConsumerServiceURL=\"http://sp.sun.com/sp/assertionConsumer.jsp\"\n    AttributeConsumingServiceIndex=\"4\"\n    ProviderName=\"TEST SAML2\">\n    <saml:Issuer\n\txmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\"\n\tNameQualifier=\"test.com\"\n\tSPNameQualifier=\"sp.test.com\"\n\tFormat=\"urn:oasis:names:tc:SAML:2.0:nameid-format:persistent\"\n\tSPProvidedID=\"sp1.test.com\">\n\toCd/Q2KH7rgOSdX8KiIW54t4EUbC\n    </saml:Issuer>\n    <samlp:Extensions\n         xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\">\n         <SAML1Element name=\"Extension1\"/>\n         <SAML2Element name=\"Extension2\"/>\n    </samlp:Extensions>\n    <samlp:NameIDPolicy \n           xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\"\n           Format=\"urn:oasis:names:tc:SAML:2.0:nameid-format:entity\"\n           SPNameQualifier=\"https://sp.example.org/sunsaml\" \n           AllowCreate=\"false\"> \n     </samlp:NameIDPolicy> \n     <saml:Conditions NotBefore=\"2006-12-13T02:22:30Z\" NotOnOrAfter=\"2006-12-13T02:32:30Z\">\n        <saml:AudienceRestriction>\n            <saml:Audience>sp.test.sun.com</saml:Audience>\n        </saml:AudienceRestriction>\n    </saml:Conditions>\n    <samlp:RequestedAuthnContext Comparison=\"exact\">\n        <saml:AuthnContextClassRef>\n            urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport\n        </saml:AuthnContextClassRef>          \n    </samlp:RequestedAuthnContext>\n     <samlp:Scoping\n         xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\"\n         ProxyCount=\"1\"> \n         <samlp:IDPList xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\"> \n              <samlp:IDPEntry \n                   xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\" \n                   ProviderID=\"http://www.sp1.org\" \n                   Name=\"SAML TEST\" \n                   Loc=\"http://www.sun.com\"> \n              </samlp:IDPEntry> \n              <samlp:GetComplete xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\"> \n                     http://www.sun.com \n              </samlp:GetComplete> \n         </samlp:IDPList> \n      <samlp:RequesterID xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\"> \n            http://www.sun.com \n      </samlp:RequesterID> \n     </samlp:Scoping> \n</samlp:AuthnRequest>\n",
+        "output": "str",
+        "x": 240,
+        "y": 60,
+        "wires": [
+            [
+                "2d86215c.841206"
+            ]
+        ]
+    },
+    {
+        "id": "2d86215c.841206",
+        "type": "xmlc14n",
+        "z": "c58fa0b5.4ce44",
+        "name": "",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "6e6326e5.315ac8"
+            ]
+        ]
+    }
+]

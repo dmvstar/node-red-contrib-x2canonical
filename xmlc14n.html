@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('xmlc14n',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "xml.png",
+        label: function() {
+            return this.name||"xmlc14n";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="encryptRSA">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i>Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="xmlc14n">
+    <p>A simple node that converts the message payloads into characters</p>
+</script>
