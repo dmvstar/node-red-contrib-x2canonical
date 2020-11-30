@@ -55,7 +55,8 @@
         "y": 60,
         "wires": [
             [
-                "2d86215c.841206"
+                "2d86215c.841206",
+                "4491956d.e34afc"
             ]
         ]
     },
@@ -66,6 +67,43 @@
         "name": "",
         "x": 100,
         "y": 120,
+        "wires": [
+            [
+                "6e6326e5.315ac8",
+                "4794f704.c89b3"
+            ]
+        ]
+    },
+    {
+        "id": "4491956d.e34afc",
+        "type": "file",
+        "z": "c58fa0b5.4ce44",
+        "name": "xml-in.xml",
+        "filename": "xml-in.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "6e6326e5.315ac8"
+            ]
+        ]
+    },
+    {
+        "id": "4794f704.c89b3",
+        "type": "file",
+        "z": "c58fa0b5.4ce44",
+        "name": "xml-out.xml",
+        "filename": "xml-out.xml",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 110,
+        "y": 180,
         "wires": [
             [
                 "6e6326e5.315ac8"

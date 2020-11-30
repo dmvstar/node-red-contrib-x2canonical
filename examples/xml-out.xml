@@ -1,0 +1,33 @@
+<samlp:AuthnRequest xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" AssertionConsumerServiceIndex="2" AssertionConsumerServiceURL="http://sp.sun.com/sp/assertionConsumer.jsp" AttributeConsumingServiceIndex="4" Consent="http://www.sp.com/consent" Destination="http://www.sp.com/sp" ForceAuthn="false" ID="d2b7c388cec36fa7c39" isPassive="false" IssueInstant="2006-11-30T22:32:20Z" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" ProviderName="TEST SAML2" Version="2.0">
+    <saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" NameQualifier="test.com" SPNameQualifier="sp.test.com" SPProvidedID="sp1.test.com">
+	oCd/Q2KH7rgOSdX8KiIW54t4EUbC
+    </saml:Issuer>
+    <samlp:Extensions>
+         <SAML1Element name="Extension1"></SAML1Element>
+         <SAML2Element name="Extension2"></SAML2Element>
+    </samlp:Extensions>
+    <samlp:NameIDPolicy AllowCreate="false" Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" SPNameQualifier="https://sp.example.org/sunsaml"> 
+     </samlp:NameIDPolicy> 
+     <saml:Conditions xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" NotBefore="2006-12-13T02:22:30Z" NotOnOrAfter="2006-12-13T02:32:30Z">
+        <saml:AudienceRestriction>
+            <saml:Audience>sp.test.sun.com</saml:Audience>
+        </saml:AudienceRestriction>
+    </saml:Conditions>
+    <samlp:RequestedAuthnContext Comparison="exact">
+        <saml:AuthnContextClassRef xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+            urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+        </saml:AuthnContextClassRef>          
+    </samlp:RequestedAuthnContext>
+     <samlp:Scoping ProxyCount="1"> 
+         <samlp:IDPList> 
+              <samlp:IDPEntry Loc="http://www.sun.com" Name="SAML TEST" ProviderID="http://www.sp1.org"> 
+              </samlp:IDPEntry> 
+              <samlp:GetComplete> 
+                     http://www.sun.com 
+              </samlp:GetComplete> 
+         </samlp:IDPList> 
+      <samlp:RequesterID> 
+            http://www.sun.com 
+      </samlp:RequesterID> 
+     </samlp:Scoping> 
+</samlp:AuthnRequest>
