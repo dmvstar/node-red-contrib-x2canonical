@@ -1,10 +1,10 @@
 {
-  "name": "@dmvstar/node-red-contrib-xml-c14n",
+  "name": "node-red-contrib-xmlc14n",
   "description": "Simple node for wrapping of xml-c14n Node.js library",
   "version": "0.0.4",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmvstar/node-red-contrib-xml-c14n.git"
+    "url": "git+https://github.com/dmvstar/node-red-contrib-xmlc14n.git"
   },
   "node-red": {
     "nodes": {
@@ -25,9 +25,9 @@
     "Stardust <dmvstar.devel@gmail.com>"
   ],
   "bugs": {
-    "url": "https://github.com/dmvstar/node-red-contrib-xml-c14n/issues"
+    "url": "https://github.com/dmvstar/node-red-contrib-xmlc14n/issues"
   },
-  "homepage": "https://github.com/dmvstar/node-red-contrib-xml-c14n#readme",
+  "homepage": "https://github.com/dmvstar/node-red-contrib-xmlc14n#readme",
   "main": "xmlc14n.js",
   "directories": {
     "example": "examples"
