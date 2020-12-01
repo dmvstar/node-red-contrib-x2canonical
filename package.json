@@ -1,36 +1,38 @@
 {
-	"name": "node-red-contrib-xml-c14n",
-	"description": "Simple node for wrapping of xml-c14n Node.js library",
-	"version": "0.0.4",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dmvstar/node-red-contrib-xml-c14n.git"
-	},
-	"node-red": {
-		"nodes": {
-			"xmlc14n": "xmlc14n.js"
-		}
-	},
-	"dependencies": {
-		"xml-c14n": ">=0.0.6",
-		"xmldom": ">=0.3.0"
-	},
-	"keywords": [
-		"node-red",
-		"xml"
-	],
-	"license": "MIT",
-	"author": 
-		{
-			"name": "StarDust",
-			"email": "dmvstar.devel@gmail.com",
-			"url": "https://github.com/dmvstar"
-		}
-	,
-	"maintainers": [
-		{
-			"name": "Stardust",
-			"email": "dmvstar.devel@gmail.com"
-		}
-	]
+  "name": "@dmvstar/node-red-contrib-xml-c14n",
+  "description": "Simple node for wrapping of xml-c14n Node.js library",
+  "version": "0.0.4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmvstar/node-red-contrib-xml-c14n.git"
+  },
+  "node-red": {
+    "nodes": {
+      "xmlc14n": "xmlc14n.js"
+    }
+  },
+  "dependencies": {
+    "xml-c14n": ">=0.0.6",
+    "xmldom": ">=0.3.0"
+  },
+  "keywords": [
+    "node-red",
+    "xml"
+  ],
+  "license": "MIT",
+  "author": "StarDust <dmvstar.devel@gmail.com> (https://github.com/dmvstar)",
+  "maintainers": [
+    "Stardust <dmvstar.devel@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/dmvstar/node-red-contrib-xml-c14n/issues"
+  },
+  "homepage": "https://github.com/dmvstar/node-red-contrib-xml-c14n#readme",
+  "main": "xmlc14n.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
