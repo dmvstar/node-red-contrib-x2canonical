@@ -12,8 +12,8 @@
     }
   },
   "dependencies": {
-    "xml-c14n": ">=0.0.5",
-    "xmldom": ">=0.3.0"
+    "xml-c14n": ">=0.0.6",
+    "xmldom": ">=0.4.0"
   },
   "keywords": [
     "node-red",
