@@ -1,10 +1,10 @@
 {
-  "name": "node-red-contrib-xmlc14n",
+  "name": "node-red-contrib-x2canonical",
   "description": "Simple node for wrapping of xml-c14n Node.js library",
   "version": "0.0.5",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmvstar/node-red-contrib-xmlc14n.git"
+    "url": "git+https://github.com/dmvstar/node-red-contrib-x2canonical.git"
   },
   "node-red": {
     "nodes": {
@@ -12,13 +12,14 @@
     }
   },
   "dependencies": {
-    "xml-c14n": ">=0.0.6",
-    "xmldom": ">=0.4.0"
+    "xml-c14n": "~0.0.6",
+    "xmldom": "~0.4.0"
   },
   "keywords": [
     "node-red",
     "xml",
-    "c14n"
+    "c14n",
+    "camonicalisation"
   ],
   "license": "MIT",
   "author": "StarDust <dmvstar.devel@gmail.com> (https://github.com/dmvstar)",
@@ -26,14 +27,11 @@
     "Stardust <dmvstar.devel@gmail.com>"
   ],
   "bugs": {
-    "url": "https://github.com/dmvstar/node-red-contrib-xmlc14n/issues"
+    "url": "https://github.com/dmvstar/node-red-contrib-x2canonical/issues"
   },
-  "homepage": "https://github.com/dmvstar/node-red-contrib-xmlc14n#readme",
+  "homepage": "https://github.com/dmvstar/node-red-contrib-x2canonical#readme",
   "main": "xmlc14n.js",
   "directories": {
     "example": "examples"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
